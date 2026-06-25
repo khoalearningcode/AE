@@ -1,6 +1,6 @@
-Cái **Linux/Git/Docker** này là base cực quan trọng, thậm chí với AI Engineer còn quan trọng ngang Python engineering, vì sau này bạn sẽ liên tục gặp: server GPU, SSH, training remote, Docker deploy RAG, Git branch làm team, `.env`, port, volume, compose.
+**Linux/Git/Docker** là nền tảng quan trọng ngang Python engineering trong AI engineering, vì các project thực tế thường gặp: server GPU, SSH, training remote, Docker deploy RAG, Git branch làm team, `.env`, port, volume, compose.
 
-Nên hiểu dòng này như sau:
+Định nghĩa năng lực:
 
 > **Linux/Git/Docker:** biết làm việc trên terminal/server, quản lý môi trường, code bằng Git đúng quy trình, đóng gói project bằng Docker, chạy nhiều service bằng Docker Compose.  
 > **Mức đạt:** clone một repo AI/RAG/CV về server, setup env, chạy train/infer/API, debug lỗi cơ bản, version code bằng Git, dockerize được app và chạy lại được trên máy khác.
@@ -20,7 +20,7 @@ Cần học:
 |Env variable|`export`, `.bashrc`, `PATH`, `CUDA_VISIBLE_DEVICES`|Biết set GPU, API key, path model|
 |Package/system|`apt`, `wget`, `curl`, `unzip`, `tar`|Tải data/code/model trên server được|
 
-Cái cần hiểu kỹ nhất:
+Phần cần hiểu kỹ nhất:
 
 ```bash
 cd
@@ -39,7 +39,7 @@ nvidia-smi
 tmux
 ```
 
-Đặc biệt với AI project, bạn phải quen:
+Đặc biệt với AI project, cần quen:
 
 ```bash
 nvidia-smi
@@ -74,13 +74,13 @@ rsync -avP ./project/ minhkhoa@gpuserver1:/home/minhkhoa/project/
 ssh -L 8888:localhost:8888 minhkhoa@gpuserver1
 ```
 
-Mức đạt: bạn tự dùng server GPU mượt, không bị kẹt ở mấy lỗi như port, copy file, SSH key, process bị tắt khi disconnect.
+Mức đạt: tự dùng server GPU ổn định, không bị kẹt ở các lỗi như port, copy file, SSH key, process bị tắt khi disconnect.
 
 ---
 
 ## 3. Environment / Python env
 
-Cái này nằm giữa Linux và Python.
+Phần này nằm giữa Linux và Python.
 
 Cần học:
 
@@ -155,7 +155,7 @@ wandb/
 *.ckpt
 ```
 
-Mức đạt: bạn biết làm project theo branch, không phá code chính, không push data/checkpoint nặng lên GitHub.
+Mức đạt: làm project theo branch, không phá code chính, không push data/checkpoint nặng lên GitHub.
 
 ---
 
@@ -167,7 +167,7 @@ Cần học:
 
 |Mảng|Cần biết|Mức đạt|
 |---|---|---|
-|Image/container|image là template, container là instance đang chạy|Hiểu Docker đang chạy cái gì|
+|Image/container|image là template, container là instance đang chạy|Hiểu Docker đang chạy phần gì|
 |Dockerfile|`FROM`, `WORKDIR`, `COPY`, `RUN`, `CMD`|Tự viết Dockerfile cho FastAPI/RAG app|
 |Build/run|`docker build`, `docker run`|Build image và chạy container được|
 |Port mapping|`-p 8000:8000`|Mở API ra ngoài|
@@ -197,7 +197,7 @@ docker build -t rag-api .
 docker run --env-file .env -p 8000:8000 rag-api
 ```
 
-Mức đạt: bạn có thể dockerize một app RAG/API đơn giản để người khác chạy không cần setup thủ công.
+Mức đạt: dockerize được một app RAG/API đơn giản để người khác chạy không cần setup thủ công.
 
 ---
 
@@ -251,17 +251,17 @@ docker compose down
 docker compose logs -f app
 ```
 
-Mức đạt: bạn chạy được một mini RAG stack bằng Docker Compose.
+Mức đạt: chạy được một mini RAG stack bằng Docker Compose.
 
 ---
 
-# Cái nào cần học kỹ nhất?
+# Phần nào cần học kỹ nhất?
 
-Với bạn, thứ tự ưu tiên nên là:
+Thứ tự ưu tiên học:
 
 ## Ưu tiên 1: Linux terminal + SSH
 
-Vì bạn làm CV/RAG/research sẽ dùng server GPU rất nhiều. Không vững cái này là rất dễ bị kẹt ở lỗi nhỏ.
+CV/RAG/research thường dùng server GPU rất nhiều. Không vững phần này rất dễ bị kẹt ở lỗi nhỏ.
 
 Cần đạt:
 
@@ -306,7 +306,7 @@ git push origin feature/add-reranker
 
 ## Ưu tiên 3: Dockerfile
 
-Dockerfile giúp bạn biến project từ “chạy được trên máy tôi” thành “ai cũng chạy được”.
+Dockerfile giúp chuyển project từ “chạy được trên máy cá nhân” thành “ai cũng chạy được”.
 
 Cần đạt:
 
@@ -336,7 +336,7 @@ biết volume lưu data
 
 ---
 
-# Những cái chưa cần học quá sâu ngay
+# Những phần chưa cần học quá sâu ngay
 
 |Chưa cần sâu|Lý do|
 |---|---|
@@ -390,7 +390,7 @@ Và có endpoint:
 POST /ask
 ```
 
-Như vậy là bạn đã cover đủ:
+Project này cover đủ:
 
 ```text
 Linux terminal
@@ -403,7 +403,7 @@ RAG app structure
 
 ---
 
-Tóm lại, dòng roadmap này nên viết lại thành:
+Dòng roadmap chuẩn hóa:
 
 > **Linux/Git/Docker:** sử dụng terminal/server qua SSH, quản lý process/log/disk/GPU/env, dùng Git branch workflow sạch, viết Dockerfile để đóng gói app, dùng Docker Compose để chạy app + database/vector database.  
 > **Mức đạt:** tự clone một repo AI lên server, setup env, chạy train/infer/API, debug lỗi cơ bản, quản lý version bằng Git, và dockerize được một mini RAG/FastAPI project chạy lại được trên máy khác.

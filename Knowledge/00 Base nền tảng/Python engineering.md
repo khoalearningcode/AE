@@ -1,3 +1,4 @@
+# Python Engineering — Knowledge cần học kỹ
 
 | Nhóm                  | Cần hiểu kỹ                                                                             | Mức cần đạt thực tế                                                           |
 | --------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
@@ -15,11 +16,11 @@
 | **Async cơ bản**      | `async/await`, khi nào dùng cho API/request I/O                                         | Đủ hiểu khi làm LLM API, crawler, RAG service; chưa cần quá sâu               |
 | **Environment**       | `venv/conda`, `pip`, `requirements.txt`, `.gitignore`                                   | Clone repo về cài được, không phụ thuộc máy cá nhân                           |
 
-Cái cần hiểu **kỹ nhất** là 5 phần này:
+Phần cần hiểu **kỹ nhất** là 5 phần này:
 
 **1. Package + import + project structure**
 
-Đây là cái rất nhiều người yếu. Làm AI project mà không hiểu cái này thì repo rất dễ nát. Cần biết vì sao nên viết:
+Đây là phần thường gây lỗi trong project AI. Làm AI project mà không hiểu phần này thì repo rất dễ nát. Cần biết vì sao nên viết:
 
 ```bash
 project/
@@ -50,7 +51,7 @@ Mức đạt: có thể tự tạo một repo RAG nhỏ, chạy được bằng 
 
 **2. Function/class design**
 
-Cái này quan trọng hơn học syntax nâng cao. Bạn phải biết chia:
+Phần này quan trọng hơn syntax nâng cao. Cần biết chia:
 
 ```python
 def load_documents(path): ...
@@ -74,13 +75,13 @@ class Retriever:
         ...
 ```
 
-Mức đạt: nhìn một pipeline AI, bạn biết phần nào nên là function, phần nào nên là class.
+Mức đạt: nhìn một pipeline AI và biết phần nào nên là function, phần nào nên là class.
 
 ---
 
 **3. Config + logging + error handling**
 
-Đây là thứ phân biệt code học chơi và code đi làm.
+Đây là nhóm năng lực phân biệt code thử nghiệm và code có thể vận hành.
 
 Không nên viết:
 
@@ -107,13 +108,13 @@ logger.warning("Empty document found: %s", path)
 logger.error("Failed to build index", exc_info=True)
 ```
 
-Mức đạt: khi code lỗi, bạn không mò trong bóng tối. Log cho bạn biết lỗi ở bước nào.
+Mức đạt: khi code lỗi, log cho biết lỗi nằm ở bước nào.
 
 ---
 
 **4. CLI/script hóa notebook**
 
-Với AI Engineer, bạn không thể chỉ chạy notebook. Notebook dùng để thử nghiệm, nhưng project thật phải script hóa.
+Với AI Engineer, notebook chỉ nên dùng để thử nghiệm; project thật cần được script hóa.
 
 Ví dụ cần chạy được:
 
@@ -123,13 +124,13 @@ python -m scripts.query --question "What is RAG?"
 python -m scripts.evaluate --dataset data/eval.json
 ```
 
-Mức đạt: từ notebook thí nghiệm, bạn refactor thành script sạch.
+Mức đạt: refactor notebook thí nghiệm thành script sạch.
 
 ---
 
 **5. Typing vừa đủ**
 
-Typing không phải để làm màu. Nó giúp bạn tự kiểm tra logic.
+Typing dùng để làm rõ logic, cấu trúc dữ liệu và tự kiểm tra các giả định quan trọng.
 
 Ví dụ:
 
@@ -189,7 +190,7 @@ python -m scripts.build_index --config configs/default.yaml
 python -m scripts.ask --question "Explain attention"
 ```
 
-Còn mấy thứ **chưa cần học sâu ngay**:
+Các phần **chưa cần học sâu ngay**:
 
 |Chưa cần ưu tiên|Vì sao|
 |---|---|
@@ -200,9 +201,9 @@ Còn mấy thứ **chưa cần học sâu ngay**:
 |Design pattern nặng|Dễ học lan man|
 |Package publishing lên PyPI|Chưa cần cho giai đoạn này|
 
-Tóm lại, dòng đó nên sửa thành:
+Dòng năng lực chuẩn hóa:
 
 > **Python engineering:** biết tổ chức repo, chia module/package, viết function/class sạch, dùng typing/config/logging/error handling, tạo CLI script, quản lý môi trường, test cơ bản.  
 > **Mức đạt:** biến được notebook AI/RAG/CV thành một project chạy được bằng terminal, có cấu trúc rõ, dễ debug, dễ tái sử dụng, người khác clone về chạy được.
 
-Đây là base rất đáng học kỹ, vì sau này bạn làm RAG, Agent, CV training, research code, deploy API đều đụng lại đúng mấy thứ này.
+Đây là nền tảng dùng lại khi làm RAG, Agent, CV training, research code, deploy API đều đụng lại đúng mấy thứ này.

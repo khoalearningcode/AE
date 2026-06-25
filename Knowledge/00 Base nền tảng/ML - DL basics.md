@@ -1,9 +1,8 @@
-
-#ML/DL Basics — Knowledge cần học kỹ
+# ML/DL Basics — Knowledge cần học kỹ
 
 ## 1. Machine Learning loop
 
-Đây là xương sống đầu tiên.
+Đây là xương sống của machine learning.
 
 Một model học theo vòng lặp:
 
@@ -25,7 +24,7 @@ Cần hiểu kỹ các khái niệm:
 |**Batch**|Một nhóm sample được xử lý trong một update|
 |**Validation**|Tập dùng để kiểm tra model có generalize không|
 
-Trong PyTorch, training loop thường gồm dataset/dataloader, model forward, loss function, optimizer, backward, và update weight. PyTorch docs mô tả optimizer là thành phần điều chỉnh model weights dựa trên kết quả của loss function trong training loop. ([docs.pytorch.org](https://docs.pytorch.org/tutorials/beginner/introyt/trainingyt.html?utm_source=chatgpt.com "Training with PyTorch"))
+Trong PyTorch, training loop thường gồm dataset/dataloader, model forward, loss function, optimizer, backward, và update weight. PyTorch docs mô tả optimizer là thành phần điều chỉnh model weights dựa trên kết quả của loss function trong training loop. ([docs.pytorch.org](https://docs.pytorch.org/tutorials/beginner/introyt/trainingyt.html "Training with PyTorch"))
 
 Cách đọc đơn giản:
 
@@ -40,7 +39,7 @@ Lặp lại nhiều lần → model học tốt hơn.
 
 ## 2. Training vs Inference
 
-Đây là cặp khái niệm phải phân biệt rất rõ.
+Đây là cặp khái niệm cần phân biệt rõ.
 
 |Phần|Training|Inference|
 |---|---|---|
@@ -319,7 +318,7 @@ similarity(image, correct text) cao
 similarity(image, wrong text) thấp
 ```
 
-CLIP là ví dụ kinh điển: model học visual concepts từ natural language supervision và có thể dùng text label để làm zero-shot classification. ([OpenAI](https://openai.com/index/clip/?utm_source=chatgpt.com "CLIP: Connecting text and images"))
+CLIP là ví dụ kinh điển: model học visual concepts từ natural language supervision và có thể dùng text label để làm zero-shot classification. ([OpenAI](https://openai.com/index/clip/ "CLIP: Connecting text and images"))
 
 ---
 
@@ -470,7 +469,7 @@ Retriever tốt trên eval query giống hệt document,
 nhưng user hỏi paraphrase thì retrieve sai.
 ```
 
-TensorFlow docs mô tả overfitting/underfitting theo quan hệ giữa train data và khả năng học pattern: underfitting xảy ra khi model vẫn còn nhiều chỗ cải thiện trên train data; ngược lại, overfitting là khi model học train data nhưng không generalize tốt. ([TensorFlow](https://www.tensorflow.org/tutorials/keras/overfit_and_underfit?utm_source=chatgpt.com "Overfit and underfit | TensorFlow Core"))
+TensorFlow docs mô tả overfitting/underfitting theo quan hệ giữa train data và khả năng học pattern: underfitting xảy ra khi model vẫn còn nhiều chỗ cải thiện trên train data; ngược lại, overfitting là khi model học train data nhưng không generalize tốt. ([TensorFlow](https://www.tensorflow.org/tutorials/keras/overfit_and_underfit "Overfit and underfit | TensorFlow Core"))
 
 ---
 
@@ -573,7 +572,7 @@ domain-specific examples
 
 ## 12. Evaluation metrics
 
-Metric phải chọn theo bài toán. `sklearn.metrics` có nhiều nhóm metric cho classification, ranking, regression, probability score, pairwise distance, clustering. ([Scikit-learn](https://scikit-learn.org/stable/modules/model_evaluation.html?utm_source=chatgpt.com "3.4. Metrics and scoring: quantifying the quality of predictions"))
+Metric phải chọn theo bài toán. `sklearn.metrics` có nhiều nhóm metric cho classification, ranking, regression, probability score, pairwise distance, clustering. ([Scikit-learn](https://scikit-learn.org/stable/modules/model_evaluation.html "3.4. Metrics and scoring: quantifying the quality of predictions"))
 
 ---
 
@@ -658,13 +657,13 @@ recall = 70%.
 F1 = 2 × precision × recall / (precision + recall)
 ```
 
-F1 là harmonic mean của precision và recall, thường hữu ích hơn accuracy khi class imbalance. Google ML Crash Course cũng nhấn mạnh F1 cân bằng precision/recall và phù hợp hơn accuracy trong dataset mất cân bằng. ([Google for Developers](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall?utm_source=chatgpt.com "Classification: Accuracy, recall, precision, and related metrics"))
+F1 là harmonic mean của precision và recall, thường hữu ích hơn accuracy khi class imbalance. Google ML Crash Course cũng nhấn mạnh F1 cân bằng precision/recall và phù hợp hơn accuracy trong dataset mất cân bằng. ([Google for Developers](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall "Classification: Accuracy, recall, precision, and related metrics"))
 
 ---
 
 ### ROC-AUC
 
-ROC-AUC đo khả năng model phân biệt positive và negative trên nhiều threshold. Google ML Crash Course mô tả AUC như xác suất một positive example được xếp cao hơn một negative example ngẫu nhiên. ([Google for Developers](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc?utm_source=chatgpt.com "Classification: ROC and AUC | Machine Learning"))
+ROC-AUC đo khả năng model phân biệt positive và negative trên nhiều threshold. Google ML Crash Course mô tả AUC như xác suất một positive example được xếp cao hơn một negative example ngẫu nhiên. ([Google for Developers](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc "Classification: ROC and AUC | Machine Learning"))
 
 Cần hiểu:
 
@@ -678,7 +677,7 @@ Nhưng với positive class cực hiếm, PR-AUC thường hữu ích hơn ROC-A
 
 ### PR-AUC
 
-Precision-Recall curve hữu ích khi class imbalance. Scikit-learn docs nói precision-recall là thước đo hữu ích khi class rất mất cân bằng. ([Scikit-learn](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html?utm_source=chatgpt.com "Precision-Recall"))
+Precision-Recall curve hữu ích khi class imbalance. Scikit-learn docs nói precision-recall là thước đo hữu ích khi class rất mất cân bằng. ([Scikit-learn](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html "Precision-Recall"))
 
 Dùng khi:
 
@@ -714,7 +713,7 @@ absolute error = 3m
 
 Đây là nhóm cực quan trọng cho RAG, semantic search, image retrieval, person re-ID, VLM retrieval.
 
-Sentence Transformers mô tả semantic search là quá trình embed query và corpus vào vector space rồi tìm corpus embeddings gần nhất với query embedding, mặc định thường dùng cosine similarity. ([sbert.net](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html?utm_source=chatgpt.com "Semantic Search — Sentence Transformers documentation"))
+Sentence Transformers mô tả semantic search là quá trình embed query và corpus vào vector space rồi tìm corpus embeddings gần nhất với query embedding, mặc định thường dùng cosine similarity. ([sbert.net](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html "Semantic Search — Sentence Transformers documentation"))
 
 ### Recall@k
 
@@ -741,7 +740,7 @@ Recall@k thấp → LLM không có evidence đúng → answer dễ sai.
 ### Precision@k
 
 ```text
-Trong top-k retrieved results, bao nhiêu cái relevant?
+Trong top-k retrieved results, bao nhiêu phần relevant?
 ```
 
 Ví dụ:
@@ -860,7 +859,7 @@ Cần học các khái niệm:
 |**Domain mismatch**|Embedding model không hợp domain|
 |**Hard negative**|Negative nhìn rất giống positive nhưng thật ra sai|
 
-Hugging Face course mô tả semantic search bằng embeddings như một cách xây search engine dựa trên ý nghĩa thay vì chỉ keyword matching. ([Hugging Face](https://huggingface.co/learn/llm-course/chapter5/6?utm_source=chatgpt.com "Semantic search with FAISS"))
+Hugging Face course mô tả semantic search bằng embeddings như một cách xây search engine dựa trên ý nghĩa thay vì chỉ keyword matching. ([Hugging Face](https://huggingface.co/learn/llm-course/chapter5/6 "Semantic search with FAISS"))
 
 ---
 
@@ -930,7 +929,7 @@ Reranker tối ưu precision/ranking quality.
 
 RAG phải đánh giá theo từng tầng, không gộp một điểm duy nhất.
 
-RAGAS docs nhấn mạnh đánh giá RAG nên tách từng component trong pipeline, với các metric như faithfulness, answer relevancy, context recall, context precision, context utilization. ([docs.ragas.io](https://docs.ragas.io/en/v0.1.21/concepts/metrics/?utm_source=chatgpt.com "Metrics"))
+RAGAS docs nhấn mạnh đánh giá RAG nên tách từng component trong pipeline, với các metric như faithfulness, answer relevancy, context recall, context precision, context utilization. ([docs.ragas.io](https://docs.ragas.io/en/v0.1.21/concepts/metrics/ "Metrics"))
 
 ### 16.1 Retrieval-level metrics
 
@@ -943,7 +942,7 @@ RAGAS docs nhấn mạnh đánh giá RAG nên tách từng component trong pipel
 |**Context recall**|Retrieved context có bao phủ đủ thông tin cần thiết không?|
 |**Context precision**|Relevant chunks có được xếp trên irrelevant chunks không?|
 
-RAGAS stable docs định nghĩa context precision là metric đánh giá khả năng retriever xếp relevant chunks cao hơn irrelevant chunks trong retrieved context. ([docs.ragas.io](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_precision/?utm_source=chatgpt.com "Context Precision"))
+RAGAS stable docs định nghĩa context precision là metric đánh giá khả năng retriever xếp relevant chunks cao hơn irrelevant chunks trong retrieved context. ([docs.ragas.io](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_precision/ "Context Precision"))
 
 ---
 
@@ -958,7 +957,7 @@ RAGAS stable docs định nghĩa context precision là metric đánh giá khả 
 |**Citation accuracy**|Citation có thật sự support câu được trích không?|
 |**Hallucination rate**|Answer có thêm thông tin không có trong context không?|
 
-RAGAS paper mô tả RAG evaluation khó vì cần xét nhiều chiều: retrieval có lấy đúng/focused context không, LLM có khai thác context một cách faithful không, và generation có chất lượng không. ([arXiv](https://arxiv.org/abs/2309.15217?utm_source=chatgpt.com "RAGAS: Automated Evaluation of Retrieval Augmented Generation"))
+RAGAS paper mô tả RAG evaluation khó vì cần xét nhiều chiều: retrieval có lấy đúng/focused context không, LLM có khai thác context một cách faithful không, và generation có chất lượng không. ([arXiv](https://arxiv.org/abs/2309.15217 "RAGAS: Automated Evaluation of Retrieval Augmented Generation"))
 
 ---
 
@@ -979,9 +978,9 @@ RAGAS paper mô tả RAG evaluation khó vì cần xét nhiều chiều: retriev
 
 ## 17. LLM inference metrics
 
-Vì roadmap của bạn có LLM Serving và GPU Inference, phần ML/DL basics nên có kiến thức inference metric.
+Vì roadmap có LLM Serving và GPU Inference, phần ML/DL basics nên có kiến thức inference metric.
 
-NVIDIA NIM benchmarking docs định nghĩa TPS là tổng output tokens per second của hệ thống qua các concurrent requests; TPS tăng theo số request đến khi GPU compute bão hòa rồi có thể giảm. ([NVIDIA Docs](https://docs.nvidia.com/nim/benchmarking/llm/latest/metrics.html?utm_source=chatgpt.com "Metrics — NVIDIA NIM LLMs Benchmarking"))
+NVIDIA NIM benchmarking docs định nghĩa TPS là tổng output tokens per second của hệ thống qua các concurrent requests; TPS tăng theo số request đến khi GPU compute bão hòa rồi có thể giảm. ([NVIDIA Docs](https://docs.nvidia.com/nim/benchmarking/llm/latest/metrics.html "Metrics — NVIDIA NIM LLMs Benchmarking"))
 
 Cần học:
 
@@ -1314,7 +1313,7 @@ Không nên fine-tune chỉ để nhét tài liệu mới vào model nếu RAG g
 
 ## 28. CV/DL basics liên quan hướng Vision
 
-Vì roadmap của bạn có visual intelligence, VLM, image-text retrieval, document AI, video understanding, nên DL basics nên có thêm phần vision.
+Vì roadmap có visual intelligence, VLM, image-text retrieval, document AI, video understanding, nên DL basics nên có thêm phần vision.
 
 Cần học:
 
@@ -1368,7 +1367,7 @@ contrastive objective → align image/text
 
 ---
 
-# Cấu trúc docs nên ghi
+# Cấu trúc ghi chú
 
 ```text
 ML/DL Basics
@@ -1409,4 +1408,4 @@ ML/DL Basics
 20. CV/VLM basics
 ```
 
-Đây là phần **kiến thức nền phải học kỹ nhất**. Nếu bạn docs lại theo cấu trúc này thì sau này học RAG, Agent, LLM Serving, CV/VLM hay GPU inference đều có nền để hiểu bản chất, không bị học keyword rời rạc.
+Đây là phần **kiến thức nền cần học kỹ**. Cấu trúc này tạo nền cho RAG, Agent, LLM Serving, CV/VLM hay GPU inference đều có nền để hiểu bản chất, không bị học keyword rời rạc.

@@ -1,6 +1,6 @@
-Cái **API/backend** này với AI Engineer không cần học backend sâu như backend engineer, nhưng **phải đủ để biến model/RAG/LLM pipeline thành một service dùng được**.
+**API/backend** trong AI engineering không yêu cầu độ sâu như backend engineer, nhưng cần đủ năng lực để biến model/RAG/LLM pipeline thành một service dùng được.
 
-Nên hiểu dòng này như sau:
+Định nghĩa năng lực:
 
 > **API/backend:** biết HTTP hoạt động thế nào, thiết kế REST API cơ bản, dùng FastAPI để expose model/RAG/LLM pipeline, hiểu request/response, validation, error handling, streaming token, auth/env/logging cơ bản.  
 > **Mức đạt:** tự build được một API kiểu `/ask`, `/retrieve`, `/embed`, `/predict`, chạy local hoặc Docker, frontend/người khác gọi được.
@@ -9,7 +9,7 @@ Nên hiểu dòng này như sau:
 
 ## 1. HTTP cần hiểu gì?
 
-HTTP là nền tảng của API. Bạn không cần học quá sâu networking, nhưng phải hiểu:
+HTTP là nền tảng của API. Không cần học quá sâu networking, nhưng phải hiểu:
 
 |Mảng|Cần biết|Mức đạt|
 |---|---|---|
@@ -80,13 +80,13 @@ POST /chat/completions
 GET  /health
 ```
 
-Mức đạt: bạn biết chia API theo chức năng, endpoint nhìn vào là hiểu.
+Mức đạt: biết chia API theo chức năng, endpoint nhìn vào là hiểu.
 
 ---
 
 ## 3. FastAPI cần học gì?
 
-FastAPI là cái bạn nên ưu tiên nhất trong mảng backend, vì nó rất hợp với Python AI.
+FastAPI là phần nên ưu tiên nhất trong mảng backend vì hợp với Python AI.
 
 Cần học:
 
@@ -181,7 +181,7 @@ Không nên response lung tung kiểu:
 }
 ```
 
-Mức đạt: API của bạn có schema rõ, frontend/người khác gọi không phải đoán.
+Mức đạt: API có schema rõ, frontend/người khác gọi không phải đoán.
 
 ---
 
@@ -229,15 +229,15 @@ Với LLM/RAG, endpoint hay là:
 POST /chat/stream
 ```
 
-Mức đạt: bạn hiểu streaming khác response thường ở đâu, và tự làm được demo stream token đơn giản.
+Mức đạt: hiểu streaming khác response thường ở đâu, và tự làm được demo stream token đơn giản.
 
 ---
 
-# Cái cần học kỹ nhất
+# Phần cần học kỹ nhất
 
 ## Ưu tiên 1: HTTP + request/response
 
-Vì không hiểu cái này thì dùng FastAPI chỉ là copy code.
+Nếu không hiểu phần này thì dùng FastAPI chỉ là copy code.
 
 Cần nắm:
 
@@ -255,7 +255,7 @@ JSON schema
 
 ## Ưu tiên 2: FastAPI + Pydantic
 
-Đây là core để bạn expose AI model.
+Đây là core để expose AI model.
 
 Cần nắm:
 
@@ -272,7 +272,7 @@ uvicorn
 
 ## Ưu tiên 3: API design cho AI service
 
-Bạn phải biết biến pipeline thành endpoint.
+Cần biết biến pipeline thành endpoint.
 
 Ví dụ RAG pipeline:
 
@@ -299,7 +299,7 @@ GET  /health
 
 ## Ưu tiên 4: Streaming
 
-Cái này chưa cần học quá sâu ngay từ đầu, nhưng với LLM thì chắc chắn phải biết.
+Phần này chưa cần học quá sâu ngay từ đầu, nhưng với LLM thì chắc chắn phải biết.
 
 Cần đạt:
 
@@ -312,7 +312,7 @@ biết frontend/client nhận stream khác response thường
 
 ---
 
-# Những cái chưa cần học sâu ngay
+# Những phần chưa cần học sâu ngay
 
 |Chưa cần sâu|Vì sao|
 |---|---|
@@ -380,9 +380,9 @@ thêm streaming response
 
 ---
 
-# Dòng roadmap nên viết lại thành
+# Dòng roadmap chuẩn hóa thành
 
 > **API/backend:** hiểu HTTP, REST API, method/path/query/body/header/status code, thiết kế request/response JSON rõ ràng, dùng FastAPI + Pydantic để expose model/RAG/LLM pipeline, có error handling/logging/config, biết streaming response cho chatbot.  
 > **Mức đạt:** tự build được một API AI đơn giản gồm `/health`, `/retrieve`, `/ask`, `/chat/stream`, chạy local/Docker được, người khác hoặc frontend gọi được qua HTTP.
 
-Nói gọn lại: với bạn, **API/backend không phải để thành backend engineer**, mà để bạn biến AI model thành sản phẩm có thể gọi được. Đây là cầu nối giữa **model/research code** và **real application**.
+**API/backend** trong roadmap này không nhằm đào tạo backend engineer, mà nhằm biến AI model thành sản phẩm có thể gọi được. Đây là cầu nối giữa **model/research code** và **real application**.
