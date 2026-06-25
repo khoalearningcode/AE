@@ -1,3 +1,36 @@
+# API / Backend — Knowledge cần học kỹ
+
+## Status
+
+Stage: 00 Base nền tảng  
+Current level: concept → coding practice  
+Last updated: 2026-06-25
+
+## Must understand
+
+- HTTP method, path, query, body, header và status code.
+- REST endpoint design cho AI/RAG/LLM service.
+- FastAPI route, Pydantic schema và validation.
+- Request/response contract, error handling, logging.
+- Streaming response cho chatbot/LLM.
+- Auth/env/config ở mức cơ bản.
+
+## Must practice
+
+- Build API có `/health`, `/retrieve`, `/ask`, `/chat/stream`.
+- Validate input/output bằng Pydantic.
+- Thêm logging, config và error response rõ ràng.
+- Chạy API local và bằng Docker.
+- Test endpoint qua Swagger/curl.
+
+## Can explain when ready
+
+- Vì sao schema rõ giúp frontend hoặc service khác gọi API dễ hơn?
+- Streaming khác response thường ở đâu?
+- Khi API lỗi, cách phân biệt lỗi client và server như thế nào?
+
+---
+
 **API/backend** trong AI engineering không yêu cầu độ sâu như backend engineer, nhưng cần đủ năng lực để biến model/RAG/LLM pipeline thành một service dùng được.
 
 Định nghĩa năng lực:

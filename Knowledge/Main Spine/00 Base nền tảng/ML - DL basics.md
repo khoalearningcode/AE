@@ -1,5 +1,36 @@
 # ML/DL Basics — Knowledge cần học kỹ
 
+## Status
+
+Stage: 00 Base nền tảng  
+Current level: concept consolidation  
+Last updated: 2026-06-25
+
+## Must understand
+
+- Training loop: data, model, prediction, loss, gradient, optimizer.
+- Training vs inference.
+- Dataset split, leakage, generalization.
+- Loss function, optimization, overfitting/underfitting.
+- Evaluation metrics theo từng bài toán.
+- Baseline, ablation, error analysis.
+
+## Must practice
+
+- Viết training loop nhỏ bằng PyTorch.
+- Chia train/validation/test có kiểm soát leakage.
+- So sánh metric cho classification, retrieval và regression.
+- Làm error analysis trên một tập prediction sai.
+- Ghi lại baseline và ablation tối thiểu.
+
+## Can explain when ready
+
+- Loss khác metric như thế nào?
+- Vì sao test set không được dùng để tune nhiều lần?
+- Khi nào accuracy gây hiểu nhầm?
+
+---
+
 ## 1. Machine Learning loop
 
 Đây là xương sống của machine learning.

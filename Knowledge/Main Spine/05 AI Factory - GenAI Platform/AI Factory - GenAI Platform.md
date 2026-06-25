@@ -1,10 +1,41 @@
+# AI Factory / GenAI Platform — Knowledge cần học kỹ
+
+## Status
+
+Stage: 05 AI Factory / GenAI Platform  
+Current level: drafted → architecture mapping next  
+Last updated: 2026-06-25
+
+## Must understand
+
+- Service boundary: model, retrieval, agent, tools, evaluation, monitoring.
+- Tool registry, schema, permission và approval policy.
+- Prompt/model/index/tool versioning.
+- Request tracing xuyên service: traces, metrics, logs.
+- Eval regression, feedback loop, rollback và runbook.
+- Security, governance, config drift và cost tracking.
+
+## Must practice
+
+- Vẽ mini platform architecture.
+- Trace một request qua retrieval/model/agent/tool.
+- Định nghĩa eval regression cho một workflow.
+- Viết runbook debug: retrieval failure, model failure, tool failure.
+- Ghi config/version cần rollback khi lỗi.
+
+## Can explain when ready
+
+- AI Factory khác một app RAG/Agent riêng lẻ ở đâu?
+- Vì sao service boundary quan trọng cho scale/debug/deploy?
+- Khi production answer sai, trace/debug end-to-end như thế nào?
+
+---
+
 Stage 5 tương ứng với level **AI Systems Engineer / GenAI Platform Engineer**: không còn build từng app rời rạc nữa, mà biết gom **RAG + Agent + Model Serving + Evaluation + Monitoring + Deployment** thành một platform có service boundary rõ, reuse được, đo được, debug được, rollback được.
 
 Roadmap định vị Stage 5 như sau: Stage 5 là **GenAI Platform / AI Factory Engineer**, mục tiêu là biến RAG, agents, serving, evaluation, monitoring thành production-style platform; key skills gồm **agent service, model service, retrieval service, tool registry, evaluation service, monitoring, deployment**. ([Khoalearningcode](https://khoalearningcode.github.io/AI_Engineer_Roadmap/ "AI Systems Engineer Roadmap"))
 
 ---
-
-# AI Factory / GenAI Platform — Knowledge cần học kỹ
 
 ## 1. AI Factory / GenAI Platform là gì?
 

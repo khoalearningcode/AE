@@ -1,8 +1,41 @@
+# LLM Serving — Knowledge cần học kỹ
+
+## Status
+
+Stage: 03 LLM Serving  
+Current level: drafted → benchmark practice next  
+Last updated: 2026-06-25
+
+## Must understand
+
+- LLM inference lifecycle: prefill và decode.
+- Autoregressive generation và KV cache.
+- OpenAI-compatible API, chat completions và streaming.
+- vLLM, PagedAttention, continuous batching, chunked prefill.
+- TTFT, TPOT/ITL, tokens/sec, concurrency và end-to-end latency.
+- Serving config, observability, cost và failure modes.
+
+## Must practice
+
+- Serve một model qua OpenAI-compatible endpoint.
+- Test non-streaming và streaming response.
+- Benchmark TTFT, TPOT, tokens/sec ở nhiều concurrency.
+- Ghi GPU memory và token usage.
+- Debug context overflow, queue overload hoặc slow TTFT.
+
+## Can explain when ready
+
+- Prefill khác decode như thế nào?
+- Vì sao RAG prompt dài làm TTFT tăng?
+- Vì sao model load được chưa chắc serve được concurrency thật?
+
+---
+
 Stage 3 là **module kiến thức riêng** về LLM Serving, không chỉ là vài keyword. Đây là giai đoạn chuyển từ **AI app engineer** sang **AI systems / inference-aware engineer**.
 
 ---
 
-# 3. Sau Agent mới học LLM Serving
+## 3. Sau Agent mới học LLM Serving
 
 Sau khi đã hiểu **RAG** và **Agentic AI**, bước tiếp theo là **LLM Serving**. Đây là đoạn biến việc “gọi API từ model provider” thành việc hiểu một LLM được chạy như một **production service**: nhận request, xử lý prompt, sinh token, stream response, đo latency, đo throughput, kiểm soát VRAM, batch nhiều request và tính cost.
 

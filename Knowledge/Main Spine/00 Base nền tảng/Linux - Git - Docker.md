@@ -1,3 +1,36 @@
+# Linux / Git / Docker — Knowledge cần học kỹ
+
+## Status
+
+Stage: 00 Base nền tảng  
+Current level: concept → hands-on practice  
+Last updated: 2026-06-25
+
+## Must understand
+
+- Terminal, file system, process, permission, disk và GPU check.
+- SSH, remote server, `scp`/`rsync`, port forwarding.
+- Python environment, `.env`, dependency management.
+- Git branch workflow, `.gitignore`, rollback cơ bản.
+- Dockerfile, image/container, port, volume, env.
+- Docker Compose cho nhiều service.
+
+## Must practice
+
+- SSH vào server và chạy job trong `tmux`.
+- Clone repo, tạo env, cài dependency, chạy script.
+- Tạo branch, commit sạch, không push data/checkpoint.
+- Dockerize FastAPI/RAG app.
+- Chạy app + vector DB bằng Docker Compose.
+
+## Can explain when ready
+
+- Vì sao Docker giải quyết lỗi “chạy được trên máy cá nhân”?
+- Khi nào dùng Docker Compose thay vì `docker run`?
+- Vì sao `.gitignore` đặc biệt quan trọng với AI project?
+
+---
+
 **Linux/Git/Docker** là nền tảng quan trọng ngang Python engineering trong AI engineering, vì các project thực tế thường gặp: server GPU, SSH, training remote, Docker deploy RAG, Git branch làm team, `.env`, port, volume, compose.
 
 Định nghĩa năng lực:

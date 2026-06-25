@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "925045f795d34252",
+        "id": "05d5ac13ad8f740b",
         "type": "tabs",
         "children": [
           {
-            "id": "c561c56db00e6a74",
+            "id": "8f07a143aa9999a4",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -37,7 +37,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Trình duyệt tệp"
@@ -179,35 +179,44 @@
       "bases:Tạo cơ sở mới": false
     }
   },
-  "active": "c561c56db00e6a74",
+  "active": "8f07a143aa9999a4",
   "lastOpenFiles": [
-    "Knowledge/05 AI Factory - GenAI Platform/Chưa đặt tên.md",
-    "Knowledge/00 Base nền tảng/Transformers - LLM basics.md",
-    "Knowledge/05 AI Factory - GenAI Platform/AI Factory - GenAI Platform.md",
-    "Knowledge/04 GPU Serving/GPU Inference - Serving Optimization.md",
-    "Knowledge/03 LLM Serving/LLM Serving.md",
-    "Knowledge/02 Agentic AI Systems/Agentic AI Systems.md",
-    "Knowledge/01 RAG Foundation/RAG Foundation.md",
-    "Knowledge/03 LLM Serving/XXFQMPSk",
-    "Knowledge/04 GPU Serving/Chưa đặt tên.md",
-    "Knowledge/05 AI Factory - GenAI Platform",
-    "Knowledge/03 LLM Serving/Chưa đặt tên.md",
-    "Knowledge/04 GPU Serving",
-    "Knowledge/02 Agentic AI Systems/Chưa đặt tên.md",
-    "Knowledge/03 LLM Serving",
-    "Knowledge/LLM Serving.md",
-    "Knowledge/01 RAG Foundation/Chưa đặt tên.md",
-    "Knowledge/02 Agentic AI Systems",
-    "Knowledge/00 Base nền tảng/Transforners - LLM basics.md",
-    "Knowledge/01 RAG Foundation",
-    "Chưa đặt tên.md",
-    "Pipeline-step-aware.md",
-    "Knowledge/00 Base nền tảng/ML - DL basics.md",
-    "Knowledge/00 Base nền tảng/API - Backend.md",
-    "Knowledge/00 Base nền tảng/Linux - Git - Docker.md",
-    "Knowledge/00 Base nền tảng/Python engineering.md",
-    "Welcome.md",
-    "Knowledge/00 Base nền tảng",
-    "Knowledge"
+    "Practice/Main Spine/Task.md",
+    "Knowledge/Main Spine/01 RAG Foundation/Advanced_RAG_Patterns.md",
+    "Knowledge/Main Spine/01 RAG Foundation/Caching.md",
+    "Knowledge/Main Spine/01 RAG Foundation/Performance_Latency_Cost.md",
+    "Knowledge/Main Spine/01 RAG Foundation/Data_Freshness_Update_Pipeline.md",
+    "Knowledge/Main Spine/01 RAG Foundation/Security_Permissions_Privacy.md",
+    "Knowledge/Main Spine/01 RAG Foundation/RAG_Failure_Modes.md",
+    "Knowledge/Main Spine/01 RAG Foundation/Observability_Logging.md",
+    "Knowledge/Main Spine/01 RAG Foundation/Evaluation_Dataset.md",
+    "Knowledge/Main Spine/01 RAG Foundation/RAG_Evaluation.md",
+    "Knowledge/Main Spine/01 RAG Foundation/Prompt_Grounding_Citation.md",
+    "Knowledge/Main Spine/01 RAG Foundation/Context_Construction.md",
+    "Knowledge/Main Spine/01 RAG Foundation/Rerank.md",
+    "Knowledge/Main Spine/01 RAG Foundation/HybridSearch.md",
+    "Knowledge/Main Spine/01 RAG Foundation/Retriever.md",
+    "Knowledge/Main Spine/01 RAG Foundation/VectorDB.md",
+    "Graph.canvas",
+    "AI Engineer.md",
+    "Practice/Main Spine/Projects/Natural Language Business Data Analyst.md",
+    "Practice/Main Spine/Projects/Multi-Department Enterprise AI Factory.md",
+    "Practice/Main Spine/Projects/Internal Knowledge Copilot.md",
+    "Practice/Main Spine/Projects/IT Service Desk Agent.md",
+    "Practice/Main Spine/Projects/GPU Inference Cost and Performance Optimizer.md",
+    "Practice/Main Spine/Projects/Enterprise LLM Gateway.md",
+    "Practice/Main Spine/Projects/Customer Support Resolution Assistant.md",
+    "Practice/Main Spine/Projects/Contract - Policy - RFP Review Copilot.md",
+    "Practice/Main Spine/Projects/AI Workflow Evaluation and Monitoring Platform.md",
+    "Practice/Main Spine/Projects",
+    "Knowledge/Main Spine/05 AI Factory - GenAI Platform",
+    "Knowledge/Main Spine/04 GPU Serving",
+    "Knowledge/Main Spine/03 LLM Serving",
+    "Knowledge/Main Spine/02 Agentic AI Systems",
+    "Knowledge/Main Spine/01 RAG Foundation",
+    "Knowledge/Main Spine/00 Base nền tảng",
+    "Knowledge/Main Spine",
+    "Practice/Main Spine",
+    "Practice"
   ]
 }

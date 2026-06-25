@@ -1,6 +1,37 @@
-Roadmap định vị: **RAG là knowledge layer, Agents là action/reasoning layer**; agent phải biết plan, dùng tool, retrieve evidence, gọi API, verify output, controlled action, trace logs và guardrails. ([khoalearningcode.github.io](https://khoalearningcode.github.io/AI_Engineer_Roadmap/ "AI Systems Engineer Roadmap"))
-
 # Agentic AI Systems — Knowledge cần học kỹ
+
+## Status
+
+Stage: 02 Agentic AI Systems  
+Current level: drafted → tool-calling practice next  
+Last updated: 2026-06-25
+
+## Must understand
+
+- RAG là knowledge layer, Agent là action/reasoning layer.
+- Agent loop: plan, tool route, execute, observe, verify, stop.
+- Tool schema, argument validation và tool output contract.
+- Planner/executor, state, memory policy và trace logs.
+- Guardrails, permission, human-in-the-loop.
+- Task success, tool-call accuracy, groundedness và latency/cost.
+
+## Must practice
+
+- Build agent có 2-3 tools đơn giản.
+- Ép structured output cho tool arguments.
+- Log full trajectory và tool result.
+- Thêm verifier trước final answer.
+- Tạo failure cases: wrong tool, missing evidence, invalid args.
+
+## Can explain when ready
+
+- Agent khác RAG ở điểm nào?
+- Vì sao tool calling không có nghĩa model tự chạy code?
+- Debug agent failure theo planner/tool/state/verifier như thế nào?
+
+---
+
+Roadmap định vị: **RAG là knowledge layer, Agents là action/reasoning layer**; agent phải biết plan, dùng tool, retrieve evidence, gọi API, verify output, controlled action, trace logs và guardrails. ([khoalearningcode.github.io](https://khoalearningcode.github.io/AI_Engineer_Roadmap/ "AI Systems Engineer Roadmap"))
 
 ## 1. Agent là gì?
 

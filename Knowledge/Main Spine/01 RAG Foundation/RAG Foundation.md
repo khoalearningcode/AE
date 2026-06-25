@@ -1,6 +1,54 @@
-Roadmap xác định main spine là **RAG → Agents → Serving → GPU Inference → AI Factory**, và Stage 1 ghi rõ key skills là **chunking, vector DB, reranking, citations, RAG evaluation, observability**; project RAG cũng cần có **citations, recall@k, MRR, latency report, failure cases**. ([Khoa Learning Code](https://khoalearningcode.github.io/AI_Engineer_Roadmap/ "AI Systems Engineer Roadmap"))
-
 # RAG Foundation — Knowledge cần học kỹ
+
+## Status
+
+Stage: 01 RAG Foundation  
+Current level: drafted → coding practice next  
+Last updated: 2026-06-25
+
+## Must understand
+
+- RAG pipeline end-to-end.
+- Data ingestion, parsing, metadata và document versioning.
+- Chunking trade-off: size, overlap, semantic boundary.
+- Deep dive: Chunking.
+- Embedding, vector DB, metadata filter và hybrid search.
+- Deep dive: Embedding.
+- Deep dive: VectorDB.
+- Deep dive: Retriever.
+- Deep dive: HybridSearch.
+- Deep dive: Rerank.
+- Deep dive: Context Construction.
+- Deep dive: Prompt Grounding / Citation.
+- Deep dive: RAG Evaluation.
+- Deep dive: Evaluation Dataset.
+- Deep dive: Observability / Logging.
+- Deep dive: RAG Failure Modes.
+- Deep dive: Security / Permissions / Privacy.
+- Deep dive: Data Freshness / Update Pipeline.
+- Deep dive: Performance / Latency / Cost.
+- Deep dive: Caching.
+- Deep dive: Advanced RAG Patterns.
+- Retrieval vs reranking vs context construction.
+- Citation, faithfulness, evaluation và observability.
+
+## Must practice
+
+- Build simple retriever trên một tập Markdown/PDF nhỏ.
+- Compare chunk size và top_k.
+- Measure Recall@5, MRR hoặc context precision.
+- Add reranker và so sánh trước/sau.
+- Log retrieved chunks, citation, latency và failure cases.
+
+## Can explain when ready
+
+- Vì sao vector search alone chưa đủ cho production RAG?
+- Chunking ảnh hưởng answer quality như thế nào?
+- Debug một bad RAG answer theo từng tầng ra sao?
+
+---
+
+Roadmap xác định main spine là **RAG → Agents → Serving → GPU Inference → AI Factory**, và Stage 1 ghi rõ key skills là **chunking, vector DB, reranking, citations, RAG evaluation, observability**; project RAG cũng cần có **citations, recall@k, MRR, latency report, failure cases**. ([Khoa Learning Code](https://khoalearningcode.github.io/AI_Engineer_Roadmap/ "AI Systems Engineer Roadmap"))
 
 ## 1. RAG là gì?
 
@@ -131,6 +179,8 @@ Phạm vi cần mở rộng.
 
 Chunking là chia document dài thành các đoạn nhỏ để embedding và retrieve.
 
+Note mở rộng: Chunking đi sâu vào chunk paradox, fixed-size, recursive, semantic, parent-child, hierarchical, late, table-aware và code-aware chunking.
+
 Cần học:
 
 |Loại chunking|Ý nghĩa|
@@ -173,6 +223,8 @@ Chunk quá lớn:
 ## 5. Embedding
 
 Embedding là biến text/image/document thành vector số để search theo nghĩa.
+
+Note mở rộng: Embedding đi sâu vào dense/sparse/hybrid retrieval, similarity metric, normalization, domain/multilingual/instruction embedding và retrieval eval.
 
 Flow:
 
@@ -478,7 +530,7 @@ RAGAS định nghĩa context precision là metric đánh giá retrieved contexts
 |**Answer relevancy**|Có trả lời đúng câu hỏi không|
 |**Faithfulness**|Câu trả lời có bám context không|
 |**Groundedness**|Claim có được support bởi evidence không|
-|**Citation accuracy**|Citation có thật sự support claim không|
+|**Citation accuracy**|Citation có hỗ trợ đúng claim không|
 |**Hallucination rate**|Tỷ lệ answer bịa hoặc không có trong context|
 
 ### 12.3 System-level metrics

@@ -1,5 +1,35 @@
 # Python Engineering — Knowledge cần học kỹ
 
+## Status
+
+Stage: 00 Base nền tảng  
+Current level: concept → coding practice  
+Last updated: 2026-06-25
+
+## Must understand
+
+- Project structure cho repo AI/RAG/CV.
+- Package, module, import và cách chạy bằng `python -m`.
+- Function/class boundary trong pipeline.
+- Typing, config, logging, error handling.
+- CLI script, environment và test cơ bản.
+
+## Must practice
+
+- Refactor một notebook thành package nhỏ trong `src/`.
+- Tạo CLI bằng `argparse` hoặc `typer`.
+- Đưa config ra YAML/env thay vì hard-code.
+- Thêm logging và error handling cho data/model pipeline.
+- Viết test cho chunking, preprocessing hoặc scoring function.
+
+## Can explain when ready
+
+- Vì sao project AI không nên nằm trong một notebook duy nhất?
+- Khi nào dùng function, khi nào dùng class?
+- Vì sao config/logging quan trọng hơn `print` và hard-code path?
+
+---
+
 | Nhóm                  | Cần hiểu kỹ                                                                             | Mức cần đạt thực tế                                                           |
 | --------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | **Project structure** | Chia code thành `src/`, `configs/`, `scripts/`, `tests/`, `data/`, `notebooks/`         | Nhìn repo là biết file nào làm gì, không nhét toàn bộ vào 1 notebook          |

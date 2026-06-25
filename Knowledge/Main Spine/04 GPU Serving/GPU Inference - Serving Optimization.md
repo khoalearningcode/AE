@@ -1,10 +1,43 @@
+# GPU Inference / Serving Optimization — Knowledge cần học kỹ
+
+## Status
+
+Stage: 04 GPU Serving  
+Current level: drafted → GPU-aware benchmark next  
+Last updated: 2026-06-25
+
+## Must understand
+
+- GPU inference memory: weights, KV cache, activations, buffers.
+- Precision và quantization: FP16/BF16/FP8/INT8/INT4, GPTQ/AWQ.
+- Batching, caching, tensor/pipeline/data parallelism.
+- Triton Inference Server, TensorRT/TensorRT-LLM, SGLang, Dynamo.
+- Cost per token và latency/throughput/VRAM/quality trade-off.
+- Benchmark methodology và failure modes.
+
+## Must practice
+
+- Benchmark baseline serving config.
+- Ghi TTFT, TPOT, tokens/sec, p95/p99, VRAM.
+- So sánh ít nhất một cấu hình tối ưu hoặc quantization nếu phần cứng hỗ trợ.
+- Phân tích OOM theo weights, KV cache, context, batch hoặc concurrency.
+- Ghi before/after latency, memory notes và config.
+
+## Can explain when ready
+
+- Vì sao model load vừa GPU vẫn có thể OOM khi request thật?
+- Quantization giúp gì và đánh đổi gì?
+- Triton, TensorRT-LLM, SGLang và Dynamo nằm ở tầng nào?
+
+---
+
 Sau **LLM Serving** là **GPU Inference**, khi nền tảng về cách model được serve ra API đã rõ. Stage 4 đi sâu hơn một tầng: **vì sao inference tốn GPU, memory bị ăn ở đâu, tối ưu bằng gì, benchmark trước/sau ra sao, và NVIDIA stack như Triton / TensorRT / TensorRT-LLM / Dynamo nằm ở đâu**.
 
 Roadmap ghi Stage 4 là **GPU Inference Engineer**, mục tiêu là hiểu NVIDIA-style model deployment và optimization. Key skills gồm **GPU memory, quantization, Triton, TensorRT basics, TensorRT-LLM concept, SGLang concept, Dynamo concept, cost per token**; deliverable là GPU-aware inference benchmark và deployment demo có before/after latency, memory notes, config, benchmark chart. ([Khoalearningcode][1])
 
 ---
 
-# 4. Sau Serving mới học GPU Inference
+## 4. Sau Serving mới học GPU Inference
 
 Stage 3 — LLM Serving trả lời câu hỏi:
 

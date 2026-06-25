@@ -1,8 +1,37 @@
-Đây là ghi chú **kiến thức nền Transformer/LLM**, không phải checklist phỏng vấn. Trong roadmap, phần này nằm ngay dưới nền của **RAG, agentic AI, LLM serving, GPU inference, multimodal/VLM**. Roadmap cũng nhấn mạnh các skill như RAG evaluation, reranking, citations, observability, streaming, KV cache, batching, TTFT, TPOT, tokens/sec. Transformer/LLM basics cần được học để hiểu **LLM sinh chữ như thế nào, vì sao context có giới hạn, vì sao hallucinate, và vì sao inference tốn GPU/memory**. ([Khoalearningcode](https://khoalearningcode.github.io/AI_Engineer_Roadmap/ "AI Systems Engineer Roadmap"))
+# Transformers / LLM Basics — Knowledge cần học kỹ
+
+## Status
+
+Stage: 00 Base nền tảng  
+Current level: concept consolidation  
+Last updated: 2026-06-25
+
+## Must understand
+
+- Tokenization, token IDs và vocabulary.
+- Embedding, positional information và Transformer block.
+- Attention, Q/K/V, causal mask và decoder-only LLM.
+- Next-token prediction và autoregressive generation.
+- Decoding strategies: temperature, top-k, top-p.
+- Context length, KV cache, hallucination và grounding.
+
+## Must practice
+
+- Tokenize vài câu tiếng Việt/Anh/code và so sánh số token.
+- Vẽ luồng input text → token IDs → embeddings → output logits.
+- Giải thích causal mask bằng ví dụ next-token prediction.
+- So sánh output khi đổi temperature/top_p.
+- Liên hệ context length/KV cache với serving cost.
+
+## Can explain when ready
+
+- Token khác word như thế nào?
+- Vì sao GPT sinh text từ trái sang phải?
+- Vì sao prompt dài làm inference tốn hơn?
 
 ---
 
-# Transformer / LLM Basics — Knowledge cần học kỹ
+Đây là ghi chú **kiến thức nền Transformer/LLM**, không phải checklist phỏng vấn. Trong roadmap, phần này nằm ngay dưới nền của **RAG, agentic AI, LLM serving, GPU inference, multimodal/VLM**. Roadmap cũng nhấn mạnh các skill như RAG evaluation, reranking, citations, observability, streaming, KV cache, batching, TTFT, TPOT, tokens/sec. Transformer/LLM basics cần được học để hiểu **LLM sinh chữ như thế nào, vì sao context có giới hạn, vì sao hallucinate, và vì sao inference tốn GPU/memory**. ([Khoalearningcode](https://khoalearningcode.github.io/AI_Engineer_Roadmap/ "AI Systems Engineer Roadmap"))
 
 ## 1. Transformer là gì?
 
